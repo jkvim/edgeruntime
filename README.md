@@ -18,7 +18,7 @@ Now ChatGPT support tag any GPTs in your conservation, we can ask the code-runne
 ```
 you: How to create graident background with Tailwind 
 
-ChatGPT: ...
+ChatGPT: Sure, here is the code ...
 
 you: @code-runner run above code
 ```
