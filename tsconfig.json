@@ -1,0 +1,51 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "baseUrl": ".",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "paths": {
+      "@/*": [
+        "./*"
+      ],
+      "react": [
+        "node_modules/@types/react"
+      ],
+      "reveal.js/plugin/markdown/markdown.esm": [
+        "node_modules/@types/reveal.js/plugin/markdown/markdown/index.d.ts"
+      ],
+      "reveal.js/plugin/notes/notes.esm": [
+        "node_modules/@types/reveal.js/plugin/notes/notes/index.d.ts"
+      ],
+      "reveal.js/plugin/highlight/highlight.esm": [
+        "node_modules/@types/reveal.js/plugin/highlight/highlight/index.d.ts"
+      ],
+      "reveal.js/plugin/math/math.esm": [
+        "node_modules/@types/reveal.js/plugin/math/math/index.d.ts"
+      ],
+    },
+    "module": "esnext"
+  },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}

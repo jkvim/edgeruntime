@@ -1,0 +1,34 @@
+{
+  "Navbar": {
+    "language": "語言",
+    "html-preview": "HTML 預覽"
+  },
+  "Layout": {
+    "input": "輸入",
+    "output": "輸出"
+  },
+  "FooterGPTChatDialog": {
+    "title": "在 ChatGPT 中使用",
+    "view-link": "查看圖片"
+  },
+  "GPTButton": {
+    "cta": "在 ChatGPT 中試試"
+  },
+  "Html": {
+    "title": "HTML 預覽",
+    "description": "預覽內置 Tailwind.CSS 的 HTML 代碼",
+    "example": "示例",
+    "reference-link": "參考鏈接",
+    "chat": {
+      "question": "請生成一個 TailwindCSS 示例並預覽",
+      "answer": "這是您請求的 Tailwind CSS 示例預覽：",
+      "view-link": "查看 Tailwind CSS 預覽"
+    },
+    "links": {
+      "tailwind-doc": "Tailwind CSS 文檔"
+    }
+  },
+  "FileDownloadButton": {
+    "label": "下載"
+  }
+}

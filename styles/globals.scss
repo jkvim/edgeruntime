@@ -1,0 +1,120 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.width-820 {
+  width: 820px;
+}
+
+.w-600 {
+  width: 600px;
+}
+
+.h-500 {
+  height: 500px;
+}
+
+.bg-pre {
+  background-color: var(--tw-prose-pre-bg);
+}
+
+.text-prose-pre-code {
+  color: var(--tw-prose-pre-code) !important;
+}
+
+:root {
+  --editor-width: 650px;
+  --editor-height: 800px;
+}
+
+.blob {
+  display: grid;
+  place-items: center;
+  width: 300px;
+  height: 300px;
+  border-radius: 100%;
+  background-image: radial-gradient(circle, oklch(var(--p)), oklch(var(--b1)));
+  filter: blur(100px);
+  transition: all 450ms ease-out;
+  position: fixed;
+  pointer-events: none;
+  left: 0;
+  top: 0;
+  transform: translate(calc(-50% + 15px), -50%);
+}
+
+.w-editor {
+  @apply w-full;
+  @media screen and (min-width: 640px) {
+    width: var(--editor-width);
+  }
+}
+
+.h-editor {
+  height: 600px;
+  max-height: 600px;
+  overflow: auto;
+
+  @media screen and (min-width: 640px) {
+    height: var(--editor-height);
+    max-height: var(--editor-height);
+  }
+}
+
+.gradient-background {
+  background-image: linear-gradient(120deg, #1cdce8, #bb77ed);
+}
+
+.gradient-text {
+  background-image: linear-gradient(120deg, #1cdce8, #bb77ed);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 1.5;
+}
+
+.text-dark {
+  color: #2e2e2e;
+}
+
+.text-highlight {
+  background-color: yellow;
+  @apply text-neutral rounded-sm text-dark;
+}
+
+[data-theme='dim'] {
+  --grid-color: rgba(255, 255, 255, 0.1);
+}
+
+[data-theme='cmyk'] {
+  --grid-color: rgba(0, 0, 0, 0.1);
+}
+
+.bg-artboard {
+  background-image: linear-gradient(
+      0deg,
+      transparent 24%,
+      var(--grid-color) 25%,
+      var(--grid-color) 26%,
+      transparent 27%,
+      transparent 74%,
+      var(--grid-color) 75%,
+      var(--grid-color) 76%,
+      transparent 77%,
+      transparent
+    ),
+    linear-gradient(
+      90deg,
+      transparent 24%,
+      var(--grid-color) 25%,
+      var(--grid-color) 26%,
+      transparent 27%,
+      transparent 74%,
+      var(--grid-color) 75%,
+      var(--grid-color) 76%,
+      transparent 77%,
+      transparent
+    );
+  background-size: 50px 50px;
+}

@@ -1,0 +1,34 @@
+{
+  "Navbar": {
+    "language": "Language",
+    "html-preview": "HTML Preview"
+  },
+  "Layout": {
+    "input": "Input",
+    "output": "Output"
+  },
+  "FooterGPTChatDialog": {
+    "title": "Use in ChatGPT",
+    "view-link": "View Image"
+  },
+  "GPTButton": {
+    "cta": "Try it in ChatGPT"
+  },
+  "Html": {
+    "title": "HTML Playground",
+    "description": "Preview HTML code with built-in Tailwind.CSS",
+    "example": "Example",
+    "reference-link": "Reference Link",
+    "chat": {
+      "question": "Please generate a TailwindCSS example and preview it",
+      "answer": "Here is the preview of the Tailwind CSS example you requested:",
+      "view-link": "View Tailwind CSS Preview"
+    },
+    "links": {
+      "tailwind-doc": "Tailwind CSS Doc"
+    }
+  },
+  "FileDownloadButton": {
+    "label": "Download"
+  }
+}

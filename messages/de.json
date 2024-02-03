@@ -1,0 +1,34 @@
+{
+  "Navbar": {
+    "language": "Sprache",
+    "html-preview": "HTML Vorschau"
+  },
+  "Layout": {
+    "input": "Eingabe",
+    "output": "Ausgabe"
+  },
+  "FooterGPTChatDialog": {
+    "title": "In ChatGPT verwenden",
+    "view-link": "Bild ansehen"
+  },
+  "GPTButton": {
+    "cta": "In ChatGPT ausprobieren"
+  },
+  "Html": {
+    "title": "HTML-Vorschau",
+    "description": "HTML-Code mit eingebautem Tailwind.CSS voranschauen",
+    "example": "Beispiel",
+    "reference-link": "Referenzlink",
+    "chat": {
+      "question": "Bitte erstellen Sie ein TailwindCSS-Beispiel und zeigen Sie eine Vorschau",
+      "answer": "Hier ist die Vorschau des von Ihnen angeforderten Tailwind CSS-Beispiels:",
+      "view-link": "Tailwind CSS-Vorschau ansehen"
+    },
+    "links": {
+      "tailwind-doc": "Tailwind CSS-Dokumentation"
+    }
+  },
+  "FileDownloadButton": {
+    "label": "Herunterladen"
+  }
+}

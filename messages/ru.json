@@ -1,0 +1,34 @@
+{
+  "Navbar": {
+    "language": "Язык",
+    "html-preview": "Предпросмотр HTML"
+  },
+  "Layout": {
+    "input": "Ввод",
+    "output": "Вывод"
+  },
+  "FooterGPTChatDialog": {
+    "title": "Использование в ChatGPT",
+    "view-link": "Просмотр изображения"
+  },
+  "GPTButton": {
+    "cta": "Попробовать в ChatGPT"
+  },
+  "Html": {
+    "title": "Предпросмотр HTML",
+    "description": "Предпросмотр HTML-кода с встроенным Tailwind.CSS",
+    "example": "Пример",
+    "reference-link": "Ссылка для справки",
+    "chat": {
+      "question": "Пожалуйста, создайте пример TailwindCSS и покажите его",
+      "answer": "Вот предпросмотр примера Tailwind CSS, который вы запросили:",
+      "view-link": "Посмотреть предпросмотр Tailwind CSS"
+    },
+    "links": {
+      "tailwind-doc": "Документация Tailwind CSS"
+    }
+  },
+  "FileDownloadButton": {
+    "label": "Скачать"
+  }
+}

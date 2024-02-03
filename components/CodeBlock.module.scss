@@ -1,0 +1,8 @@
+.editor {
+  @apply w-full h-full;
+
+  // code mirror style
+  :global .cm-scroller {
+    flex: 1;
+  }
+}
