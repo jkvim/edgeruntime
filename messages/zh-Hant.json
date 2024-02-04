@@ -1,5 +1,4 @@
 {
-  "Title": "程式碼沙盒 - edgeruntime.ai",
   "Navbar": {
     "language": "語言",
     "html-preview": "HTML 預覽"
@@ -16,7 +15,7 @@
     "cta": "在 ChatGPT 中試試"
   },
   "Html": {
-    "title": "HTML 預覽",
+    "title": "程式碼沙盒 - edgeruntime.ai",
     "description": "預覽內置 Tailwind.CSS 的 HTML 代碼",
     "example": "示例",
     "reference-link": "參考鏈接",

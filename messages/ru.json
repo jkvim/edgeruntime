@@ -1,5 +1,4 @@
 {
-  "title": "Игровая площадка для кода - edgeruntime.ai",
   "Navbar": {
     "language": "Язык",
     "html-preview": "Предпросмотр HTML"
@@ -16,7 +15,7 @@
     "cta": "Попробовать в ChatGPT"
   },
   "Html": {
-    "title": "Предпросмотр HTML",
+    "title": "Игровая площадка для кода - edgeruntime.ai",
     "description": "Предпросмотр HTML-кода с встроенным Tailwind.CSS",
     "example": "Пример",
     "reference-link": "Ссылка для справки",
