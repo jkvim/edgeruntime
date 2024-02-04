@@ -1,4 +1,5 @@
 {
+  "Title": "Code Playground - edgeruntime.ai",
   "Navbar": {
     "language": "Language",
     "html-preview": "HTML Preview"
@@ -15,7 +16,7 @@
     "cta": "Try it in ChatGPT"
   },
   "Html": {
-    "title": "HTML Playground",
+    "title": "Code Playground",
     "description": "Preview HTML code with built-in Tailwind.CSS",
     "example": "Example",
     "reference-link": "Reference Link",

@@ -1,7 +1,8 @@
 {
+  "title": "Code Playground - edgeruntime.ai",
   "Navbar": {
     "language": "Sprache",
-    "html-preview": "HTML Vorschau"
+    "html-preview": "HTML-Vorschau"
   },
   "Layout": {
     "input": "Eingabe",
@@ -9,20 +10,20 @@
   },
   "FooterGPTChatDialog": {
     "title": "In ChatGPT verwenden",
-    "view-link": "Bild ansehen"
+    "view-link": "Bild anzeigen"
   },
   "GPTButton": {
     "cta": "In ChatGPT ausprobieren"
   },
   "Html": {
-    "title": "HTML-Vorschau",
-    "description": "HTML-Code mit eingebautem Tailwind.CSS voranschauen",
+    "title": "Code Playground",
+    "description": "HTML-Code mit integriertem Tailwind.CSS vorschauen",
     "example": "Beispiel",
     "reference-link": "Referenzlink",
     "chat": {
       "question": "Bitte erstellen Sie ein TailwindCSS-Beispiel und zeigen Sie eine Vorschau",
-      "answer": "Hier ist die Vorschau des von Ihnen angeforderten Tailwind CSS-Beispiels:",
-      "view-link": "Tailwind CSS-Vorschau ansehen"
+      "answer": "Hier ist die Vorschau des angeforderten Tailwind CSS-Beispiels:",
+      "view-link": "Tailwind CSS-Vorschau anzeigen"
     },
     "links": {
       "tailwind-doc": "Tailwind CSS-Dokumentation"
