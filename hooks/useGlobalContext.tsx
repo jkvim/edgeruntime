@@ -1,6 +1,7 @@
 import React, { ReactNode, useContext, useEffect, useState } from "react";
 import { DARK_THEME, LIGHT_THEME } from "@/constants/theme";
 import { HTMLContent } from "@/types/types";
+import { HTMLExample } from "@/constants/examples";
 
 
 type ContextValue = {
@@ -17,7 +18,7 @@ export const GlobalContextProvider: React.FC<{ children: ReactNode }> = ({
 }) => {
   const [theme, setTheme] = useState<string>(DARK_THEME);
   const [htmlContent, setHTMLContent] = useState<HTMLContent>({
-    html: "",
+    html: HTMLExample,
     css: "",
     js: "",
   });
