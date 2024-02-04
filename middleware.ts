@@ -1,10 +1,10 @@
-import { kv } from '@vercel/kv';
 import { isToday, isBefore, startOfDay } from 'date-fns';
 import { NextResponse, type NextRequest } from 'next/server';
 import { API_KEY_PREFIX, API_MAX_LIMIT } from './constants/api';
 import { serializeToken } from './pages/api/helper';
 import { Token } from './types/types';
 import { GPT_KEY } from './constants/env';
+import { redis } from "@/storage/redis";
 
 export async function middleware(request: NextRequest) {
   if (request.method === 'POST') {
@@ -27,7 +27,7 @@ export async function middleware(request: NextRequest) {
       );
     }
 
-    const token: Token | null = await kv.hgetall(`${API_KEY_PREFIX}${apiKey}`);
+    const token: Token | null = await redis.hgetall(`${API_KEY_PREFIX}${apiKey}`);
 
     if (!token) {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
@@ -56,7 +56,7 @@ export async function middleware(request: NextRequest) {
       token.key !== GPT_KEY
     ) {
       console.log('reset count of api key');
-      await kv.hset(`${API_KEY_PREFIX}${token.key}`, {
+      await redis.hset(`${API_KEY_PREFIX}${token.key}`, {
         ...token,
         count: 0,
         date: Date.now(),

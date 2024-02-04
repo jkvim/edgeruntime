@@ -228,7 +228,7 @@ export default function HTMLPreview({ data }: Props) {
         <Layout.FooterRight>
           <FooterGPTChatDialog
             question={t("chat.question")}
-            link="/html/r93RqN8E-XjJ"
+            link="/html/J2Iqnz20N9YS"
             answer={t("chat.answer")}
             linkText={t("chat.view-link")}
           />

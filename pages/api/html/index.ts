@@ -5,6 +5,8 @@ import { API_KEY_PREFIX, HTML_KEY_PREFIX } from "@/constants/api";
 import { baseUrl } from "@/constants/url";
 import { Token } from "@/types/types";
 import { serializeToken } from "../helper";
+import { redis } from "../../../storage/redis";
+
 
 /**
  * @swagger
@@ -78,15 +80,15 @@ export default async function handler(
       return response.status(400).json({error: 'Bad Request, content is required'});
     }
     let id = nanoid(12);
-    let IdExists = await kv.hgetall(`${HTML_KEY_PREFIX}${id}`);
+    let IdExists = await redis.hgetall(`${HTML_KEY_PREFIX}${id}`);
 
     while (IdExists) {
       id = nanoid(12);
-      IdExists = await kv.hgetall(`${HTML_KEY_PREFIX}${id}`);
+      IdExists = await redis.hgetall(`${HTML_KEY_PREFIX}${id}`);
     }
 
     const apiKey = request.headers['x-api-key'] as string;
-    const token: Token | null = (await kv.hgetall(
+    const token: Token | null = (await redis.hgetall(
       `${API_KEY_PREFIX}${apiKey}`,
     )) as Token;
 
@@ -95,8 +97,8 @@ export default async function handler(
     const { html = '', css = '', js = '' } = request.body.content ?? {};
 
     // TOOD: clean markdown of this key
-    await kv.hset(`${API_KEY_PREFIX}${token.key}`, {...token, count: count + 1});
-    await kv.hset(`${HTML_KEY_PREFIX}${id}`, {
+    await redis.hset(`${API_KEY_PREFIX}${token.key}`, {...token, count: count + 1});
+    await redis.hset(`${HTML_KEY_PREFIX}${id}`, {
       html,
       css,
       js,

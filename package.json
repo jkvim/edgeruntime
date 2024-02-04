@@ -22,6 +22,7 @@
     "@uiw/codemirror-theme-atomone": "^4.21.21",
     "@uiw/codemirror-theme-tokyo-night": "^4.19.11",
     "@uiw/react-codemirror": "^4.19.11",
+    "@upstash/redis": "^1.28.3",
     "@vercel/analytics": "^1.1.1",
     "@vercel/kv": "^1.0.0",
     "ahooks": "^3.7.8",

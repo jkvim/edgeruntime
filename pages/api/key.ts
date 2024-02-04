@@ -1,9 +1,9 @@
-import { kv } from "@vercel/kv";
 import { NextApiRequest, NextApiResponse } from "next";
 import {isBefore, isToday, startOfDay} from 'date-fns';
 import { nanoid } from "nanoid";
 import { API_KEY_PREFIX } from "@/constants/api";
 import { LOCAL_IP } from "@/constants/env";
+import { redis } from "@/storage/redis";
 
 type IPCount = {
   key: string;
@@ -38,7 +38,7 @@ export default async function handler(
       return res.status(400).json({error: 'Bad request'});
     }
 
-    const result: IPCount | null = serializeResult(await kv.hgetall(`ip:${ip}`))
+    const result: IPCount | null = serializeResult(await redis.hgetall(`ip:${ip}`))
     console.log('[result]', result);
 
     if (result) {
@@ -54,16 +54,16 @@ export default async function handler(
 
 async function generateNewKey(ip: string, res: NextApiResponse, result: IPCount | null) {
   let newKey = nanoid()
-  let keyExists = await kv.get(`${API_KEY_PREFIX}${newKey}`);
+  let keyExists = await redis.get(`${API_KEY_PREFIX}${newKey}`);
 
   // delete old key, avoid delete local ip
   if (result && ip !== LOCAL_IP) {
-    await kv.del(`${API_KEY_PREFIX}${result.key}`);
+    await redis.del(`${API_KEY_PREFIX}${result.key}`);
   }
 
   while (keyExists) {
     newKey = nanoid();
-    keyExists = await kv.get(`${API_KEY_PREFIX}${newKey}`);
+    keyExists = await redis.get(`${API_KEY_PREFIX}${newKey}`);
   }
 
   // reset count if last request was more than 24 hours ago, and count is more than 3
@@ -74,13 +74,13 @@ async function generateNewKey(ip: string, res: NextApiResponse, result: IPCount 
 
   console.log('[newKey]', newKey);
 
-  await kv.hset(`ip:${ip}`, {
+  await redis.hset(`ip:${ip}`, {
     key: newKey,
     count: result ? result.count + 1 : 1,
     date: result ? result.date : Date.now(),
   });
 
-  await kv.hset(`${API_KEY_PREFIX}${newKey}`, {key: newKey, ip, date: Date.now(), count: 0});
+  await redis.hset(`${API_KEY_PREFIX}${newKey}`, {key: newKey, ip, date: Date.now(), count: 0});
 
 
   return res.status(200).json({ key: newKey });
