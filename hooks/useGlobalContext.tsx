@@ -2,6 +2,7 @@ import React, { ReactNode, useContext, useEffect, useState } from "react";
 import { DARK_THEME, LIGHT_THEME } from "@/constants/theme";
 import { HTMLContent } from "@/types/types";
 import { HTMLExample } from "@/constants/examples";
+import { useRouter } from "next/router";
 
 
 type ContextValue = {
@@ -16,9 +17,10 @@ export const GlobalContext = React.createContext<ContextValue | null>(null);
 export const GlobalContextProvider: React.FC<{ children: ReactNode }> = ({
   children,
 }) => {
+  const { query } = useRouter();
   const [theme, setTheme] = useState<string>(DARK_THEME);
   const [htmlContent, setHTMLContent] = useState<HTMLContent>({
-    html: HTMLExample,
+    html: !query.id ? HTMLExample : "",
     css: "",
     js: "",
   });
