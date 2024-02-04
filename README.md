@@ -50,3 +50,5 @@ yarn dev
 ```
  curl -X POST "http://localhost:3002/api/key"
 ```
+
+The key in the response can be used in your GPTs by configuring in the GPTs editor
