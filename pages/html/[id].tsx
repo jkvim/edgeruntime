@@ -1,8 +1,7 @@
 import { GetServerSidePropsContext } from "next";
 import HTMLPreview from "@/components/html";
 import { HTMLContent } from "@/types/types";
-
-const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+import { baseUrl } from "@/constants/url";
 
 export async function getServerSideProps(context: GetServerSidePropsContext<{id: string}>) { // Fetch data from your KV store here
   const { id } = context.params ?? {};
