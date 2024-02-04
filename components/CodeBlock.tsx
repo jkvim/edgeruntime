@@ -23,7 +23,7 @@ export const CodeBlock: FC<Props> = ({
   onChange = () => {},
 }) => {
   return (
-    <div className="relative w-full h-full border border-purple-800 rounded-lg">
+    <div className="relative w-full h-full rounded-lg">
       <div
         className={cn(
           " rounded-lg overflow-auto h-full w-full",

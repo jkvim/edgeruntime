@@ -72,7 +72,7 @@ export default function HTMLPreview({ data }: Props) {
             >
               HTML
             </a>
-            <div role="tabpanel" className="tab-content rounded-box">
+            <div role="tabpanel" className="tab-content rounded-box w-full overflow-auto">
               <Layout.Editor>
                 <CodeBlock
                   editable
@@ -93,7 +93,7 @@ export default function HTMLPreview({ data }: Props) {
             >
               CSS
             </a>
-            <div role="tabpanel" className="tab-content rounded-box">
+            <div role="tabpanel" className="tab-content rounded-box w-full overflow-auto">
               <Layout.Editor>
                 <CodeBlock
                   editable
@@ -113,7 +113,7 @@ export default function HTMLPreview({ data }: Props) {
             >
               JavaScript
             </a>
-            <div role="tabpanel" className="tab-content rounded-box">
+            <div role="tabpanel" className="tab-content rounded-box w-full overflow-auto">
               <Layout.Editor>
                 <CodeBlock
                   editable
@@ -138,7 +138,7 @@ export default function HTMLPreview({ data }: Props) {
         </Layout.Input>
         <Layout.Output>
           <Layout.Editor className="mt-9">
-            <div className="w-full h-full flex-1 border border-purple-800 rounded-lg overflow-hidden">
+            <div className="w-full h-full flex-1 rounded-lg overflow-hidden">
               <iframe
                 sandbox="allow-forms allow-modals allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation allow-downloads allow-presentation"
                 allow="accelerometer; camera; encrypted-media; display-capture; geolocation; gyroscope; microphone; midi; clipboard-read; clipboard-write;"
