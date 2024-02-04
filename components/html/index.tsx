@@ -138,7 +138,7 @@ export default function HTMLPreview({ data }: Props) {
         </Layout.Input>
         <Layout.Output>
           <Layout.Editor className="mt-9">
-            <div className="w-full h-full flex-1 rounded-lg overflow-hidden">
+            <div className="w-full h-full flex-1 rounded-lg overflow-hidden border border-neutral-content">
               <iframe
                 sandbox="allow-forms allow-modals allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation allow-downloads allow-presentation"
                 allow="accelerometer; camera; encrypted-media; display-capture; geolocation; gyroscope; microphone; midi; clipboard-read; clipboard-write;"

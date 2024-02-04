@@ -10,6 +10,7 @@ import { GlobalContextProvider, useGlobalContext } from "@/hooks/useGlobalContex
 
 import "@/styles/globals.scss";
 import type { AppProps } from "next/app";
+import { Analytics } from '@vercel/analytics/react';
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -38,6 +39,7 @@ function App({ Component, pageProps }: AppProps<{ messages: AbstractIntlMessages
         <Component {...pageProps} />
         <Toaster />
         <Footer />
+        <Analytics />
       </main>
     </NextIntlClientProvider>
   );
