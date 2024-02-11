@@ -24,7 +24,8 @@ you: @Code Runner run above code
 
 
 ### Examples
-* [Ask chat gpt to create home-page](https://www.edgeruntime.ai/html/AY9YDAtysKdC)
+* [Ask ChatGPT to create home-page](https://www.edgeruntime.ai/html/AY9YDAtysKdC)
+* [Ask ChatGPT to create price cards](https://www.edgeruntime.ai/html/ziRAEGxZTSdr)
 
 ## Development
 

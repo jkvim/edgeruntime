@@ -72,7 +72,10 @@ export default function HTMLPreview({ data }: Props) {
             >
               HTML
             </a>
-            <div role="tabpanel" className="tab-content rounded-box w-full overflow-auto">
+            <div
+              role="tabpanel"
+              className="tab-content rounded-box w-full overflow-auto"
+            >
               <Layout.Editor>
                 <CodeBlock
                   editable
@@ -93,7 +96,10 @@ export default function HTMLPreview({ data }: Props) {
             >
               CSS
             </a>
-            <div role="tabpanel" className="tab-content rounded-box w-full overflow-auto">
+            <div
+              role="tabpanel"
+              className="tab-content rounded-box w-full overflow-auto"
+            >
               <Layout.Editor>
                 <CodeBlock
                   editable
@@ -113,7 +119,10 @@ export default function HTMLPreview({ data }: Props) {
             >
               JavaScript
             </a>
-            <div role="tabpanel" className="tab-content rounded-box w-full overflow-auto">
+            <div
+              role="tabpanel"
+              className="tab-content rounded-box w-full overflow-auto"
+            >
               <Layout.Editor>
                 <CodeBlock
                   editable
@@ -154,8 +163,8 @@ export default function HTMLPreview({ data }: Props) {
                   />{" "}
                   <BanIcon
                     onClick={() => {
-                      setErrors([])
-                      setIsShowError(false)
+                      setErrors([]);
+                      setIsShowError(false);
                     }}
                     className="cursor-pointer text-gray-700 ml-2"
                   />
@@ -170,8 +179,8 @@ export default function HTMLPreview({ data }: Props) {
                     />{" "}
                     <BanIcon
                       onClick={() => {
-                        setErrors([])
-                        setIsShowError(false)
+                        setErrors([]);
+                        setIsShowError(false);
                       }}
                       className="cursor-pointer text-gray-700 ml-2"
                     />
@@ -210,6 +219,15 @@ export default function HTMLPreview({ data }: Props) {
                 Tailwind CSS Doc
               </Link>
             </li>
+            <li>
+              <Link
+                href="https://chat.openai.com/g/g-vZktiVWOj-tailwind-pro"
+                target="_blank"
+              >
+                Tailwind Pro GPTs(a GPTs that can help you generate code with
+                Tailwind CSS)
+              </Link>
+            </li>
           </ul>
           <h2 className="flex items-center gap-2" id="example">
             <Link className="flex items-center" href="#example">
@@ -217,12 +235,24 @@ export default function HTMLPreview({ data }: Props) {
             </Link>{" "}
             {t("example")}
           </h2>
-          <CodeHighlightBlock
-            text={HTMLExample}
-            language="html"
-            className="w-editor"
-            copy
-          />
+          <ul>
+            <li>
+              <Link
+                href="https://www.edgeruntime.ai/html/AY9YDAtysKdC"
+                target="_blank"
+              >
+                Ask ChatGPT to create home-page
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="https://www.edgeruntime.ai/html/ziRAEGxZTSdr"
+                target="_blank"
+              >
+                Ask ChatGPT to create price cards
+              </Link>
+            </li>
+          </ul>
         </Layout.FooterLeft>
 
         <Layout.FooterRight>
